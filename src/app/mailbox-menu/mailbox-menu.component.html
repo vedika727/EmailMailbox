@@ -1,0 +1,47 @@
+<div class="menu-container">
+  <div class="profile-avatar">
+    <img alt="Avatar" src="/assets/imgs/Mailbox/pexels-photo-839011@2x.png" />
+  </div>
+  <div>
+    <div class="profile-name">Mike Manson</div>
+    <div class="profile-email">iamkiran@gmail.com</div>
+  </div>
+
+  <div class="menu-items-container">
+    <ul class="menu-item">
+      <li
+        [ngClass]="selectedMenuItem == item.label.toLowerCase() ? 'active' : ''"
+        *ngFor="let item of menuItems; let i = index"
+      >
+        <a
+          [ngClass]="
+            selectedMenuItem == item.label.toLowerCase() ? 'active' : ''
+          "
+          (click)="onMenuClick(item.label.toLowerCase())"
+          ><img [src]="item.icon" /> <span>{{ item.label }}</span>
+        </a>
+        <span *ngIf="item.unreadCount !== 0">{{ item.unreadCount }}</span>
+      </li>
+    </ul>
+  </div>
+  <div class="folder-container">Folders</div>
+  <div class="add-btn">Add</div>
+  <div class="folders">
+    <ul>
+      <li
+        [ngClass]="selectedMenuItem == item.label.toLowerCase() ? 'active' : ''"
+        *ngFor="let item of folders; let i = index"
+      >
+        <a
+          [ngClass]="
+            selectedMenuItem == item.label.toLowerCase() ? 'active' : ''
+          "
+          (click)="onMenuClick(item.label.toLowerCase())"
+          ><img [src]="item.icon" /> <span>{{ item.label }}</span></a
+        >
+      </li>
+    </ul>
+  </div>
+  <div class="compose">Compose</div>
+  <div class="compose-shadow"></div>
+</div>

@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0px;
+  padding: 0pc;
+  height: 100vh;
+  width: 100vw;
+}
+:host {
+  font-family: "Product Sans", sans-serif;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+$font-family: "Product Sans", sans-serif;
+$font-14-19-bold: normal normal bold 14px/19px $font-family;
+$font-18-24-normal: normal normal normal 18px/24px $font-family;
+$font-20-27-bold: normal normal bold 20px/27px $font-family;
+$font-20-27-normal: normal normal normal 20px/27px $font-family;
+$font-16-24-normal: normal normal normal 16px/24px $font-family;
+$font-16-21-normal: normal normal normal 16px/21px $font-family;
+$white-background: #ffffff 0% 0% no-repeat padding-box;
+@mixin align-center {
+  display: flex;
+  align-items: center;
+}
+@mixin justify-center {
+  @include align-center;
+  justify-content: center;
+}
