@@ -1,6 +1,13 @@
-$font-family: "Product Sans", sans-serif;
 .card-content-container {
   z-index: 1000;
+}
+.card-content {
+  width: 520px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 20px 7px 40px #00000014;
+  border-radius: 20px;
+  opacity: 1;
+  z-index: 1;
 }
 .card-body {
   padding: 30px;
@@ -33,7 +40,7 @@ $font-family: "Product Sans", sans-serif;
   width: 101px;
   height: 27px;
   text-align: left;
-  font: normal normal bold 20px/27px $font-family;
+  font: normal normal bold 20px/27px "Product Sans", sans-serif;
   letter-spacing: 0px;
   color: #333333;
   opacity: 1;
@@ -45,7 +52,7 @@ $font-family: "Product Sans", sans-serif;
   width: 120px;
   height: 19px;
   text-align: right;
-  font: normal normal bold 14px/19px $font-family;
+  font: normal normal bold 14px/19px "Product Sans", sans-serif;
   letter-spacing: 0px;
   color: #333333;
   opacity: 1;
@@ -54,7 +61,7 @@ $font-family: "Product Sans", sans-serif;
 .email-subject {
   height: 27px;
   text-align: left;
-  font: $font-20-27-normal;
+  font: normal normal normal 20px/27px "Product Sans", sans-serif;
   letter-spacing: 0px;
   color: #333333;
   opacity: 1;
@@ -63,7 +70,7 @@ $font-family: "Product Sans", sans-serif;
   margin: 10px 0px;
   height: 51px;
   text-align: left;
-  font: $font-16-24-normal;
+  font: normal normal normal 16px/24px "Product Sans", sans-serif;
   letter-spacing: 0px;
   color: #333333b3;
   opacity: 1;
@@ -79,7 +86,7 @@ $font-family: "Product Sans", sans-serif;
   height: 20px;
 }
 .email-attachments span {
-  font: $font-16-21-normal;
+  font: normal normal normal 16px/21px "Product Sans", sans-serif;
   letter-spacing: 0px;
   color: #1fb5eb;
   opacity: 1;

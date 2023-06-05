@@ -5,46 +5,11 @@
       <input type="search" placeholder="Search" />
       <img src="/assets/imgs/Mailbox/search-interface-symbol.png" width="25" />
     </div>
-    <div class="card-box">
-      <div
-        *ngFor="let email of emails; let i = index"
-        [id]="'card-content' + i"
-        class="card-content-container"
-      >
-        <div class="card-content">
-          <div
-            class="card-body"
-            [id]="'emailCard' + i"
-            (click)="handleEmail(email, 'emailCard', 'card-content', i)"
-          >
-            <div class="card-profile-pic">
-              <img [src]="email.senderProfilePic" width="25" />
-            </div>
-            <div class="card-details">
-              <div class="sender-details">
-                <div class="sender-name">{{ email.senderName }}</div>
-                <div class="sender-email-time">
-                  <span>{{ email.sentWhen }}</span
-                  ><span>{{ email.timestamp }}</span>
-                </div>
-              </div>
-              <div class="email-subject">{{ email.subject }}</div>
-              <div class="email-body">
-                {{ email.message }}
-              </div>
-              <div
-                *ngIf="email.attachments && email.attachments.length > 0"
-                class="email-attachments"
-              >
-                <img
-                  src="/assets/imgs/Mailbox/noun_Attachment_1084336.svg"
-                /><span>{{ email.attachments.length }} Attachments</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <lib-email-card
+      class="card-box"
+      [emails]="emails"
+      (updateSelectedEmailCard)="getSelectedEmailCard($event)"
+    ></lib-email-card>
   </div>
   <div class="card-details-container">
     <div>
