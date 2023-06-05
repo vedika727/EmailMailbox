@@ -1,1 +1,88 @@
-<p>mailbox-email-details works!</p>
+<div>
+  <div class="email-icons-container">
+    <div class="action-icons"></div>
+    <div class="email-pagination"></div>
+  </div>
+  <div class="email-details-container">
+    <div class="email-details-pic">
+      <img [src]="selectedEmail.senderProfilePic" />
+    </div>
+    <div class="email-details-body">
+      <div class="email-details-sender-name">
+        {{ selectedEmail.senderName }}
+      </div>
+      <div class="email-details-subject">{{ selectedEmail.subject }}</div>
+      <div class="email-address">{{ selectedEmail.senderEmail }}</div>
+      <div class="email-time">
+        {{ selectedEmail.sentWhen + " " + selectedEmail.timestamp }}
+      </div>
+      <div class="sender-salutation">Hi Mike,</div>
+      <div class="email-message">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+        fermentum facilisis libero, venenatis mattis orci hendrerit eget. Etiam
+        ultrices mollis justo, nec fermentum elit viverra eu. Cras at cursus
+        turpis. Nullam magna sem, vulputate quis massa nec, mollis sollicitudin
+        dui. Sed eu massa in arcu pharetra posuere. Phasellus maximus neque non
+        ex dapibus fringilla. Praesent nec lacinia enim. Curabitur a dui
+      </div>
+      <div
+        *ngIf="
+          selectedEmail.attachments && selectedEmail.attachments.length > 0
+        "
+        class="email-details-attachments"
+      >
+        <img src="/assets/imgs/Mailbox/noun_Attachment_1084336.svg" /><span
+          >{{ selectedEmail.attachments.length }} Attachments</span
+        >
+      </div>
+      <div
+        *ngIf="
+          selectedEmail.attachments && selectedEmail.attachments.length > 0
+        "
+        class="image-gallery"
+      >
+        <div *ngFor="let image of selectedEmail.attachments">
+          <img [src]="image" />
+        </div>
+      </div>
+
+      <div
+        *ngIf="
+          selectedEmail.attachments && selectedEmail.attachments.length > 0
+        "
+        class="download-box"
+      >
+        <div class="download-container">
+          <div></div>
+          <span>Download</span>
+        </div>
+        <div class="email-file">5.6 mb total</div>
+      </div>
+      <div
+        [ngClass]="
+          selectedEmail.attachments && selectedEmail.attachments.length > 0
+            ? 'relative-message-container'
+            : 'fixed-message-container'
+        "
+      >
+        <div class="message-container">
+          <input type="search" placeholder="Type Message" />
+          <img
+            class="attachment-icon"
+            src="/assets/imgs/Mailbox/noun_Attachment_1084336.svg"
+            width="25"
+          />
+          <img
+            class="send-icon"
+            src="/assets/imgs/Mailbox/1933005.svg"
+            width="25"
+          />
+        </div>
+        <div class="copyright-container">
+          <span class="copyright-text">© Copyright 2005 - 2019 </span
+          ><span class>Lorem Ipsum</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

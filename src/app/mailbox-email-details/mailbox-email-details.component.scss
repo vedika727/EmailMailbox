@@ -1,0 +1,209 @@
+@import "../../styles.scss";
+.email-icons-container {
+  padding: 62px 110px;
+}
+.action-icons {
+  float: left;
+  width: 240px;
+  height: 25px;
+  background: transparent url("/assets/imgs/Mailbox/Group 25.svg") 0% 0%
+    no-repeat padding-box;
+  opacity: 1;
+}
+.email-pagination {
+  float: right;
+  width: 119px;
+  height: 32px;
+  /* UI Properties */
+  background: transparent url("/assets/imgs/Mailbox/Group 23.svg") 0% 0%
+    no-repeat padding-box;
+  margin-right: 50px;
+}
+.email-details-container {
+  margin: 50px 60px;
+  display: flex;
+}
+.email-details-pic {
+  @include profile-pic;
+  justify-content: center;
+  display: flex;
+}
+.email-details-pic img {
+  object-fit: cover;
+  width: 110px;
+  height: 75px;
+}
+.email-details-body {
+  padding: 5px 20px;
+}
+.email-details-sender-name {
+  width: 101px;
+  height: 27px;
+  text-align: left;
+  font: $font-20-27-bold;
+  letter-spacing: 0px;
+  color: #333333;
+  opacity: 1;
+}
+.email-details-subject {
+  height: 27px;
+  /* UI Properties */
+  text-align: left;
+  font: $font-20-27-normal;
+  letter-spacing: 0px;
+  color: #333333;
+  opacity: 1;
+}
+.email-address {
+  width: 161px;
+  height: 21px;
+  /* UI Properties */
+  text-align: left;
+  font: $font-16-21-normal;
+  letter-spacing: 0.26px;
+  color: #33333380;
+}
+.email-time {
+  height: 19px;
+  /* UI Properties */
+  text-align: left;
+  font: $font-14-19-bold;
+  letter-spacing: 0px;
+  color: #333333;
+  padding: 30px 0px;
+}
+.sender-salutation {
+  width: 94px;
+  height: 32px;
+  /* UI Properties */
+  text-align: left;
+  font: normal normal bold 24px/32px $font-family;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.email-message {
+  padding: 12px 0px;
+  width: 600px;
+  height: fit-content;
+  /* UI Properties */
+  text-align: left;
+  font: $font-16-24-normal;
+  letter-spacing: 0px;
+  color: #333333b3;
+}
+.email-details-attachments {
+  @include align-center;
+  padding: 17px 0px;
+  gap: 10px;
+}
+.email-details-attachments img {
+  width: 10px;
+  height: 20px;
+}
+.email-details-attachments span {
+  font: $font-16-21-normal;
+  letter-spacing: 0px;
+  color: #1fb5eb;
+  opacity: 1;
+}
+.image-gallery {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 0fr);
+  grid-auto-rows: 100px;
+  padding: 10px 0px;
+}
+
+.image-gallery > div {
+  width: fit-content;
+  height: fit-content;
+}
+.download-container {
+  @include justify-center;
+  width: 130px;
+  height: 35px;
+  background: $white-background;
+  border: 1px solid #3333338b;
+  border-radius: 6px;
+  gap: 10px;
+}
+.download-container > div {
+  width: 18px;
+  height: 18px;
+  background: transparent url("/assets/imgs/Mailbox/126488.svg") 0% 0% no-repeat
+    padding-box;
+}
+.download-container span {
+  text-align: left;
+  font: $font-16-21-normal;
+  letter-spacing: 0px;
+  color: #333333;
+  opacity: 0.4;
+}
+.download-box {
+  @include align-center;
+  gap: 25px;
+}
+.email-file {
+  width: 85px;
+  height: 21px;
+  text-align: left;
+  font: $font-16-21-normal;
+  letter-spacing: 0px;
+  color: #333333;
+  opacity: 0.4;
+}
+.message-container {
+  @include align-center;
+  width: 589px;
+  height: 58px;
+  border: 1px solid #33333333;
+  border-radius: 10px;
+  opacity: 1;
+  margin: 50px 0px;
+  gap: 12px;
+}
+.message-container input {
+  border: none;
+  background-color: #fff;
+  display: block;
+  width: 85%;
+  height: inherit;
+  box-sizing: border-box;
+  color: #33333399;
+  font: $font-18-24-normal;
+  text-indent: 15px;
+  letter-spacing: 0px;
+  position: relative;
+}
+.attachment-icon {
+  width: 20px;
+  height: 23px;
+  opacity: 1;
+}
+.send-icon {
+  width: 24px;
+  height: 23px;
+  opacity: 1;
+}
+.copyright-text {
+  width: 143px;
+  height: 16px;
+  /* UI Properties */
+  text-align: left;
+  margin-right: 5px;
+  color: #cfcfcf;
+}
+.copyright-container {
+  text-align: left;
+  font: normal normal bold 12px/20px $font-family;
+  letter-spacing: 0px;
+  color: #959595;
+}
+.fixed-message-container {
+  position: fixed;
+  bottom: 40px;
+}
+.relative-message-container {
+  position: relative;
+}

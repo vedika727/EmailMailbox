@@ -20,6 +20,7 @@ $font-20-27-bold: normal normal bold 20px/27px $font-family;
 $font-20-27-normal: normal normal normal 20px/27px $font-family;
 $font-16-24-normal: normal normal normal 16px/24px $font-family;
 $font-16-21-normal: normal normal normal 16px/21px $font-family;
+$font-24-32-normal: normal normal normal 24px/32px $font-family;
 $white-background: #ffffff 0% 0% no-repeat padding-box;
 @mixin align-center {
   display: flex;
@@ -28,4 +29,15 @@ $white-background: #ffffff 0% 0% no-repeat padding-box;
 @mixin justify-center {
   @include align-center;
   justify-content: center;
+}
+@mixin profile-pic-adjustment {
+  opacity: 1;
+  vertical-align: middle;
+  overflow: hidden;
+  border-radius: 50%;
+}
+@mixin profile-pic {
+  width: 70px;
+  height: 70px;
+  @include profile-pic-adjustment;
 }

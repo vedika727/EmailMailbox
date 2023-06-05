@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-mailbox-email-details',
   templateUrl: './mailbox-email-details.component.html',
-  styleUrls: ['./mailbox-email-details.component.scss']
+  styleUrls: ['./mailbox-email-details.component.scss'],
 })
 export class MailboxEmailDetailsComponent {
-
+  @Input() selectedEmail: any;
 }

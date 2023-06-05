@@ -1,3 +1,5 @@
+@import "../../styles.scss";
+
 $font-family: "Product Sans", sans-serif;
 
 .menu-container {
@@ -19,15 +21,10 @@ $font-family: "Product Sans", sans-serif;
   opacity: 1;
 }
 .profile-avatar {
+  @include profile-pic;
   position: absolute;
   top: 42px;
   left: 52px;
-  width: 70px;
-  height: 70px;
-  opacity: 1;
-  vertical-align: middle;
-  overflow: hidden;
-  border-radius: 50%;
 }
 .profile-avatar img {
   object-fit: cover;
@@ -42,8 +39,7 @@ $font-family: "Product Sans", sans-serif;
   width: 127px;
   height: 27px;
   text-align: left;
-  font: normal normal bold 20px/27px Product Sans;
-  font-family: $font-family;
+  font: $font-20-27-bold;
   letter-spacing: 0px;
   color: #1fb5eb;
   opacity: 1;
@@ -55,8 +51,7 @@ $font-family: "Product Sans", sans-serif;
   width: 167px;
   height: 24px;
   text-align: left;
-  font: normal normal normal 18px/24px Product Sans;
-  font-family: $font-family;
+  font: $font-18-24-normal;
   letter-spacing: 0px;
   color: #333333;
   opacity: 1;
@@ -70,7 +65,7 @@ $font-family: "Product Sans", sans-serif;
   width: inherit;
   display: flex;
   align-items: center;
-  font: normal normal 24px/32px Product Sans;
+  font: $font-24-32-normal;
 }
 .menu-item li:hover {
   cursor: pointer;
@@ -81,7 +76,7 @@ $font-family: "Product Sans", sans-serif;
   opacity: 1;
 }
 .menu-item a.active {
-  font: normal normal bold 24px/32px Product Sans;
+  font: normal normal bold 24px/32px $font-family;
   left: 0px;
   width: 10px;
   height: 70px;
@@ -110,17 +105,14 @@ $font-family: "Product Sans", sans-serif;
 }
 .menu-item > li > span {
   position: absolute;
-  font: normal normal normal 20px/27px Product Sans;
+  font: $font-20-27-normal;
+  @include justify-center;
   letter-spacing: 0px;
   color: #ffffff;
   left: 259px;
   width: 66px;
   height: 32px;
-  display: flex;
-  justify-content: center;
   background: #ff5f5f 0% 0% no-repeat padding-box;
-  font-family: $font-family;
-  align-items: center;
   border-radius: 16px;
   opacity: 1;
 }
@@ -131,10 +123,8 @@ $font-family: "Product Sans", sans-serif;
   left: 60px;
   width: 103px;
   height: 40px;
-  /* UI Properties */
   text-align: left;
-  font: normal normal bold 30px/40px Product Sans;
-  font-family: $font-family;
+  font: normal normal bold 30px/40px $font-family;
   letter-spacing: 0px;
   color: #333333;
   opacity: 1;
@@ -148,7 +138,7 @@ $font-family: "Product Sans", sans-serif;
   padding: 0px;
   text-decoration: none;
   text-align: left;
-  font: normal normal normal 24px/32px Product Sans;
+  font: $font-24-32-normal;
   letter-spacing: 0px;
   color: #333333;
   opacity: 1;
@@ -168,9 +158,8 @@ $font-family: "Product Sans", sans-serif;
 }
 .folders > ul > li > a {
   text-decoration: none;
-  display: flex;
+  @include align-center;
   gap: 20px;
-  align-items: center;
 }
 .add-btn {
   position: absolute;
@@ -181,11 +170,8 @@ $font-family: "Product Sans", sans-serif;
   background: #c7dfef 0% 0% no-repeat padding-box;
   border-radius: 16px;
   opacity: 1;
-  display: flex;
-  justify-content: center;
-  font: normal normal normal 18px Product Sans;
-  font-family: $font-family;
-  align-items: center;
+  @include justify-center;
+  font: normal normal normal 18px $font-family;
 }
 .compose {
   position: absolute;
@@ -200,9 +186,7 @@ $font-family: "Product Sans", sans-serif;
   font: normal normal normal 24px/32px Product Sans;
   letter-spacing: 0px;
   color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include justify-center;
 }
 .compose-shadow {
   position: absolute;
